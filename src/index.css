@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto","Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Roboto","Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #E5E5DD;
+  --color-foreground: #000000;
+
+  --color-primary: #000000;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #27272a;
+  --color-secondary-foreground: #000000;
+
+  --color-muted: #27272a;
+  --color-muted-foreground: #000000;
+
+  --color-accent: #27272a;
+  --color-accent-foreground: #000000;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: # ;
+  --color-input: #000000;
+  --color-ring: #6366f1;
+}
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: 0 89.5% 63.9%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5.8% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 5.8% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 5.8% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 16.1%;
+    --input: 240 5.9% 16.1%;
+    --ring: 234.5 89.5% 63.9%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+}
