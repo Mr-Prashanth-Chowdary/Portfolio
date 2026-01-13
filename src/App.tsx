@@ -4,10 +4,10 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="min-h-screen p-4">
-    <Nav />
-    <HeroSection />
-    <Footer />
+    <div className="p-4 min-h-screen">
+      <Nav />
+      <HeroSection />
+      <Footer />
     </div>
   )
 }
