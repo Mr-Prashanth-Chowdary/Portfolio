@@ -10,10 +10,12 @@ export default function HeroSection() {
         ]
     }
     return (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <h1 className='text-4xl md:text-6xl lg:text-8xl font-bold text-center lg:[word-spacing:1rem]'>{heroContent.HEADLINE}</h1>
-            <div className='flex lg:justify-center lg:flex-row flex-col gap-2 my-12'>
-                <div className='flex-1 flex items-center lg:items-center justify-center flex-col gap-2 text-sm [word-spacing:.2rem]'>
+        <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto">
+            <div>
+                <h1 className='text-4xl md:text-6xl lg:text-8xl font-bold text-center lg:[word-spacing:1rem]'>{heroContent.HEADLINE}</h1>
+            </div>
+            <div className='flex lg:justify-center lg:flex-row flex-col gap-2 my-12 w-full'>
+                <div className='flex-1 flex items-center justify-center flex-col gap-2 text-sm [word-spacing:.2rem]'>
                     <ul>
                         {heroContent.Technologies.map((tech) => (
                             <li key={tech}>{tech}</li>
