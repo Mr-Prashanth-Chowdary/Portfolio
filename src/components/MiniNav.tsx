@@ -50,7 +50,7 @@ export default function MiniNav({ isOpen, onClose, navItems }: MiniNavProps) {
       variants={menuVariants}
       initial="closed"
       animate={isOpen ? "open" : "closed"}
-      className="absolute top-0 left-0 px-4 w-full h-screen bg-black text-white z-1 flex justify-center flex-col"
+      className="fixed top-0 left-0 px-4 w-full h-screen bg-black text-white z-1 flex justify-center flex-col"
     >
       <nav className="flex flex-col gap-6">
         {navItems.map((item, i) => (

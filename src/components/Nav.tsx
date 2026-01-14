@@ -29,9 +29,10 @@ export default function Nav() {
     ]
 
     return (
-    < nav className = {`${isMenuOpen ? 'text-primary-foreground' : 'text-primary'} fixed top-0 inset-x-0 w-full z-50 px-4 py-8 transition-colors duration-500`}>
+        <>
+    < nav className = {`${isMenuOpen ? 'text-primary-foreground' : 'text-primary'} fixed top-0 left-0 right-0 z-50 w-full h-24 p-4  transition-colors duration-500`}>
             <ul className='flex justify-between w-full items-start'>
-                <h1 className='text-2xl font-bold'>
+                <h1 className='text-xl lg:text-2xl font-bold'>
                     {title.name}
                     <p className='leading-2'>{title.code}</p>
                 </h1>
@@ -55,7 +56,9 @@ export default function Nav() {
                     </button>
                 </li>
             </ul>
-            <MiniNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} navItems={navItems} />
+           
         </nav >
+         <MiniNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} navItems={navItems} />
+        </>
     )
 }
