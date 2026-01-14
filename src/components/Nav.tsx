@@ -28,7 +28,8 @@ export default function Nav() {
         }
     ]
 
-        < nav className = {`${isMenuOpen ? 'text-white' : 'text-black'} fixed top-0 inset-x-0 w-full z-50 px-4 py-8 transition-colors duration-500 `}>
+    return (
+    < nav className = {`${isMenuOpen ? 'text-white' : 'text-black'} fixed top-0 inset-x-0 w-full z-50 px-4 py-8 transition-colors duration-500`}>
             <ul className='flex justify-between w-full items-start'>
                 <h1 className='text-2xl font-bold'>
                     {title.name}
@@ -56,4 +57,5 @@ export default function Nav() {
             </ul>
             <MiniNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} navItems={navItems} />
         </nav >
+    )
 }
