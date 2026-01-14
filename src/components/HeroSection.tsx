@@ -10,7 +10,7 @@ export default function HeroSection() {
         ]
     }
     return (
-        <div className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto">
+        <div className="flex flex-col items-center justify-center w-full min-h-screen max-w-7xl mx-auto">
             <div>
                 <h1 className='text-4xl md:text-6xl lg:text-8xl font-bold text-center lg:[word-spacing:1rem]'>{heroContent.HEADLINE}</h1>
             </div>

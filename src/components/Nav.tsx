@@ -29,7 +29,7 @@ export default function Nav() {
     ]
 
     return (
-    < nav className = {`${isMenuOpen ? 'text-white' : 'text-black'} fixed top-0 inset-x-0 w-full z-50 px-4 py-8 transition-colors duration-500`}>
+    < nav className = {`${isMenuOpen ? 'text-primary-foreground' : 'text-primary'} fixed top-0 inset-x-0 w-full z-50 px-4 py-8 transition-colors duration-500`}>
             <ul className='flex justify-between w-full items-start'>
                 <h1 className='text-2xl font-bold'>
                     {title.name}
@@ -49,7 +49,7 @@ export default function Nav() {
                 <li className='lg:hidden list-none text-sm'>
                     <button
                         onClick={() => setIsMenuOpen(prev => !prev)}
-                        className='hover:text-primary transition-colors cursor-pointer'
+                        className={`${isMenuOpen ? 'text-primary-foreground' : 'text-primary'} hover:text-primary transition-colors cursor-pointer`}
                     >
                         {isMenuOpen ? "[ CLOSE ]" : "[ MENU ]"}
                     </button>
