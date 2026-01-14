@@ -7,11 +7,11 @@
   --color-background: #E5E5DD;
   --color-foreground: #000000;
 
-  --color-primary: #000000;
-  --color-primary-foreground: #ffffff;
+  --color-primary: #000000; /* black */
+  --color-primary-foreground: #ffffff; /* white */
 
-  --color-secondary: #27272a;
-  --color-secondary-foreground: #000000;
+  --color-secondary: #27272a; /* dark gray */
+  --color-secondary-foreground: #000000; /* black */
 
   --color-muted: #27272a;
   --color-muted-foreground: #000000;
@@ -25,6 +25,8 @@
   --color-border: # ;
   --color-input: #000000;
   --color-ring: #6366f1;
+
+  --text-nano: 0.5rem;
 }
 
 @layer base {

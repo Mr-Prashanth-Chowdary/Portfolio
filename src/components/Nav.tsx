@@ -27,11 +27,12 @@ export default function Nav() {
             href: "/"
         }
     ]
+
     return (
-        <div className='min-h-24'>
-            <nav>
-                <ul className='flex justify-between w-full'>
-                    <h1 className='text-2xl font-bold'>
+        <div>
+            <nav className='absolute z-10 w-full inset-x-0 px-4'>
+                <ul className='flex justify-between w-full items-start'>
+                    <h1 className={`${isMenuOpen ? "text-primary-foreground" : "text-primary"} text-2xl font-bold`}>
                         {title.name}
                         <p className='leading-2'>{title.code}</p>
                     </h1>
@@ -48,20 +49,15 @@ export default function Nav() {
                     {/* Mobile Menu Button */}
                     <li className='lg:hidden list-none text-sm'>
                         <button
-                            onClick={() => setIsMenuOpen(true)}
-                            className='hover:text-primary transition-colors cursor-pointer'
+                            onClick={() => setIsMenuOpen(prev => !prev)}
+                            className= {`${isMenuOpen ? "text-primary-foreground" : "text-primary"} hover:text-primary transition-colors cursor-pointer`}
                         >
-                            [ MENU ]
+                            {isMenuOpen ? "[ CLOSE ]" : "[ MENU ]"}
                         </button>
                     </li>
                 </ul>
             </nav>
-
-            <MiniNav
-                isOpen={isMenuOpen}
-                onClose={() => setIsMenuOpen(false)}
-                navItems={navItems}
-            />
+             <MiniNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} navItems={navItems} />
         </div>
     )
 }

@@ -50,18 +50,8 @@ export default function MiniNav({ isOpen, onClose, navItems }: MiniNavProps) {
       variants={menuVariants}
       initial="closed"
       animate={isOpen ? "open" : "closed"}
-      className="fixed top-0 left-0 w-full h-screen bg-black text-white z-50 flex flex-col p-8"
+      className="absolute top-0 left-0 px-4 w-full h-screen bg-black text-white z-1 flex justify-center flex-col"
     >
-      <div className="flex justify-between items-center mb-16">
-        <h1 className="text-2xl font-bold">PC<span className="text-xs ml-2 font-normal opacity-70">007</span></h1>
-        <button
-          onClick={onClose}
-          className="text-sm font-medium hover:text-white/70 transition-colors"
-        >
-          [ CLOSE ]
-        </button>
-      </div>
-
       <nav className="flex flex-col gap-6">
         {navItems.map((item, i) => (
           <motion.a
@@ -78,11 +68,7 @@ export default function MiniNav({ isOpen, onClose, navItems }: MiniNavProps) {
           </motion.a>
         ))}
       </nav>
-
-      <div className="mt-auto pt-8 border-t border-white/10 flex justify-between text-xs opacity-50 uppercase tracking-widest">
-        <span>Portfolio 2026</span>
-        <span>Built with React + Vite</span>
-      </div>
+      <div className="absolute bottom-4 text-nano opacity-50">CREATED BY PRASHANTH CHOWDARY</div>
     </motion.div>
   );
 }
