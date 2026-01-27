@@ -18,7 +18,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
-      - uses: actions/artifact-uploader@v4
+      - uses: actions/upload-artifact@v4
         with: 
           name: dist
           path: dist
