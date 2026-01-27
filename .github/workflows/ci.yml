@@ -36,6 +36,6 @@ jobs:
         with:
           host: pc007.in
           username: ec2-user
-          key: ${{ secrets.PRIVATE_KEY }}
+          key: ${{ secrets.PUBKEY }}
           source: dist/*
           target: /usr/share/nginx/html
