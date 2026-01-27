@@ -28,7 +28,7 @@ export default function HeroSection() {
                 </div>
                 <div className='relative flex-1 flex flex-col justify-center items-center lg:justify-end lg:items-start text-sm [word-spacing:.2rem]'>
                     <p className="opacity-60 text-[0.7rem]">ME</p>
-                    <p className="font-bold">PRASHANTH CHOWDARY</p>
+                    <h1 className="font-bold text-[1.5rem]">PRASHANTH CHOWDARY</h1>
                 </div>
             </div>
         </div>
