@@ -22,7 +22,7 @@ export default function HeroSection() {
                 <div className='w-[300px] h-[300px] lg:w-[350px] lg:h-[350px] m-auto overflow-hidden grayscale hover:grayscale-0 transition-all duration-500'>
                     <img
                         className='w-full h-full object-contain scale-135 hover:scale-117 transition-transform duration-700'
-                        src="/Profile.png"
+                        src="/Profile.webp"
                         alt="Prashanth Chowdary"
                     />
                 </div>
