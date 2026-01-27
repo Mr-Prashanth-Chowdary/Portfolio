@@ -39,3 +39,4 @@ jobs:
           key: ${{ secrets.PROTFOLIO_PVT_KEY }}
           source: dist/*
           target: /usr/share/nginx/html
+      - run: nginx -s reload
