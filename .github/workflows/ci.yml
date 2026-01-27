@@ -18,7 +18,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
-      - run: echo "PRIVATE_KEY=$(cat ${{ secrets.PRIVATE_KEY }})" >> $GITHUB_ENV 
+      - run: echo "${{ secrets.PRIVATE_KEY }}"
       - uses: actions/upload-artifact@v4
         with: 
           name: web-build
@@ -36,6 +36,6 @@ jobs:
         with:
           host: pc007.in
           username: ec2-user
-          key: ${{ env.PRIVATE_KEY }}
+          key: ${{ secrets.PRIVATE_KEY }}
           source: dist/*
           target: /usr/share/nginx/html
