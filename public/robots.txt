@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pc007.in/sitemap.xml
