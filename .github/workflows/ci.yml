@@ -23,14 +23,14 @@ jobs:
           name: dist
           path: dist
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: appleboy/scp-action@master
-        with:
-          host: pc007.in
-          username: ec2-user
-          key: ${{ secrets.PRIVATE_KEY }}
-          source: dist
-          target: /usr/share/nginx/html
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: appleboy/scp-action@master
+  #       with:
+  #         host: pc007.in
+  #         username: ec2-user
+  #         key: ${{ secrets.PRIVATE_KEY }}
+  #         source: dist
+  #         target: /usr/share/nginx/html
