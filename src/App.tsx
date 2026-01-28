@@ -1,15 +1,16 @@
-import Nav from './components/Nav'
-import HeroSection from './components/HeroSection'
-import Footer from './components/Footer'
-import Title from './components/Title'
+import About from "./pages/About";
+import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col justify-between p-4">
-      <Nav />
-      <Title />
-      <HeroSection />
-      <Footer />
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
     </div>
   )
 }
