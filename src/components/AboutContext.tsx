@@ -2,7 +2,7 @@
 export default function About() {
   return (
     <>
-    <div className="w-1/2">
+    <div className="sm:w-3/4 w-1/2">
     <p>I didn’t enter technology through tutorials or certifications.
        I entered it by breaking things.</p>
     
