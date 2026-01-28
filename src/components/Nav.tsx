@@ -12,7 +12,7 @@ export default function Nav() {
     const navItems = [
         {
             label: "ABOUT ME",
-            href: "/"
+            href: "/about"
         },
         {
             label: "PORTFOLIO",
